@@ -7,6 +7,7 @@ import GoogleDrive from "@/views/GoogleDrive"
 import OneDrive from "@/views/OneDrive"
 import Dropbox from "@/views/Dropbox"
 import Box from "@/views/Box"
+import SharePoint from "@/views/SharePoint"
 import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router);
@@ -39,6 +40,11 @@ export const router = new Router(
           path: '/onedrive',
           name: 'onedrive',
           component: OneDrive
+        },
+        {
+          path: '/sharepoint',
+          name: 'sharepoint',
+          component: SharePoint
         },
         {
           path: '/dropbox',

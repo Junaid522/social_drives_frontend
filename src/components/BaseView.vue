@@ -41,7 +41,15 @@
       <td>Onedrive</td>
       <td>Not Defined</td>
       <td><router-link v-if="onedrive_status === true" :to="{ path: 'onedrive' }">Onedrive Files</router-link>
-        <a v-else="onedrive_status === false" v-bind:href="onedrive_uri" target="_blank">Connect to Onedrive</a></td>
+        <a v-else="onedrive_status === false" v-bind:href="onedrive_uri" target="_blank">Connect to Microsoft</a></td>
+      <td><button v-on:click="disconnect_account('onedrive')" @click="makeToast(false,'Onedrive')" class="btn btn-danger">Disconnect</button></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>SharePoint</td>
+      <td>Not Defined</td>
+      <td><router-link v-if="onedrive_status === true" :to="{ path: 'sharepoint' }">SharePoint Files</router-link>
+        <a v-else="onedrive_status === false" v-bind:href="onedrive_uri" target="_blank">Connect to Microsoft</a></td>
       <td><button v-on:click="disconnect_account('onedrive')" @click="makeToast(false,'Onedrive')" class="btn btn-danger">Disconnect</button></td>
     </tr>
   </table>
